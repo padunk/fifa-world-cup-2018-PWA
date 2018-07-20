@@ -1,0 +1,122 @@
+.home-main {
+  margin: 0;
+  padding: 0;
+}
+
+.countdown-container {
+  font-family: 'Exo', cursive;
+  display: grid;
+  display: -ms-grid;
+  grid-template-areas:
+  'title title title title'
+  'days hours mins secs';
+  margin-top: 1em;
+  margin-bottom: 1.25em;
+  justify-content: space-evenly;
+  align-content: center;
+}
+.countdown-time-title {
+  grid-area: title;
+  align-self: center;
+}
+.days {grid-area: days;}
+.hours {grid-area: hours;}
+.mins {grid-area: mins;}
+.secs {grid-area: secs;}
+.countdown-time > strong {
+  font-family: 'Dusha', sans-serif;
+  font-weight: 200;
+}
+
+.fact-main {
+  display: grid;
+  display: -ms-grid;
+  background: url("https://footballcitymediacenter.com/images/75/98/759842.jpg") no-repeat center fixed;
+  /*background: url("/src/assets/759842.webp") no-repeat center fixed;*/
+  background-size: cover;
+  min-width: 100%;
+  min-height: 800px;
+  font-weight: 200;
+  padding-bottom: 3em;
+}
+.fact-title-div {
+  display: grid;
+  display: -ms-grid;
+  align-content: center;
+  font-size: 3em;
+}
+.fact-title {
+  color: #222;
+  text-shadow: 
+  3px 3px 0 #ddd,
+  -1px -1px 0 #ddd,
+  1px -1px 0 #ddd,
+  -1px 1px 0 #ddd,
+  1px 1px 0 #ddd;
+}
+.fact-body-div {
+  background-color: rgba(0, 0, 0, 0.69);
+  color: #eee;
+  min-width: 100%;
+  min-height: 200px;
+  position: relative;
+  display: grid;
+  display: -ms-grid;
+}
+.fact-body {
+  align-content: center;
+  font-size: 2em;
+  max-width: 60%;
+  margin: 0 auto;
+}
+.fact-body-text {
+  text-align: center;
+  font-family: 'Arima Madurai', cursive;
+  letter-spacing: 0.05rem;
+  font-weight: 100;
+}
+
+.image-footer {
+  padding-top: 0.6em;
+  padding-bottom: 0.75em;
+}
+.image-footer > em > a {
+  text-decoration: none;
+}
+.image-footer > em > a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 450px) {
+  .fact-main {
+    min-height: 200px;
+  }
+  .fact-title-div {
+    font-size: 1em;
+  }
+  .fact-body {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .countdown-container {
+    grid-template-areas: 
+    'title days hours mins secs';
+  }
+  .countdown-time-title {
+    font-size: 1em;
+  }
+  .countdown-time > strong {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .countdown-time-title {
+    font-size: 1.5em;
+  }
+  .countdown-time > strong {
+    font-size: 2em;
+  }
+}

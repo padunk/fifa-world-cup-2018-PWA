@@ -1,0 +1,224 @@
+.matches-main {
+  display: flex;
+  font-family: 'Exo', sans-serif;
+  flex-direction: column;
+}
+
+.matches-title {
+  font-family: 'Dusha', serif;
+  font-size: 2em;
+  font-weight: 200;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 0.3em;
+}
+.matches-title-div > ul {
+  padding: 0;
+}
+.matches-groups-select {
+  list-style: none;
+  display: inline;
+  padding: 1em;
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+.matches-card {
+  border: 1px solid #bbb;
+  border-radius: 1em;
+  margin: 0.625em 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.matches-card-title {
+  text-align: center;
+  background: linear-gradient(to right, #aaa, #eee);
+  padding: 0.3em;
+  margin-bottom: 1em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+.matches-card-body {
+  display: flex;
+  justify-content: start;
+  align-content: space-around;
+  padding: 0.5em;
+}
+.matches-card-info {
+  flex-basis: 20%;
+  margin: 0 auto;
+  padding: 0.3125em;
+}
+.matches-card-teams {
+  flex-basis: 80%;
+  align-self: center;
+}
+.matches-card-team-name-home {
+  margin-right: 0.6125em;
+  font-size: 2em;
+}
+.matches-card-team-name-visitant{
+  margin-left: 0.6125em;
+  font-size: 2em;
+}
+.matches-result {
+  font-size: 1.8em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.matches-card-team-vs {
+  margin: 0 1em;
+  font-size: 1em;
+}
+.match-country-flag {
+  width: 4em;
+}
+.matches-card-penalty {
+  margin-top: 15px;
+  font-size: 1.125em;
+  text-align: center;
+}
+.matches-card-penalty-result {
+  margin-top: 10px;
+}
+
+.stadium-modal {
+  cursor: pointer;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.19), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+  width: 4em;
+  border-radius: 0.25rem;
+  transition: width 0.2s;
+  -webkit-transition: width 0.2s;
+}
+.stadium-modal:hover {
+  width: 4.25em;
+  opacity: 0.75;
+}
+.matches-card-info-image-div {
+  position: relative;
+}
+.matches-card-info-bottom-right {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8125em;
+}
+
+@media only screen and (width: 768px) {
+.matches-card-info-bottom-right {
+  display: none;
+}
+}
+
+@media only screen and (max-width: 425px) {
+  .stadium-modal, .matches-card-info-image-div,
+  .match-country-flag {
+    display: none;
+  }
+  .matches-title-div {
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 1 2;
+    justify-content: center;
+  }
+  .matches-title-div > ul {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0;
+  }
+  .matches-title-div > ul > li {
+    padding: 0.1em;
+  }
+  .matches-card-body {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+  .matches-card-teams {
+    display: -ms-grid;
+    display: grid;
+    justify-content: center;
+  }
+  .matches-card-team-name-home, .matches-card-team-name-visitant {
+    font-size: 1em;
+    padding: 1em;
+    margin: 0;
+  }
+  .matches-card-team-vs {
+    font-size: 0.75em;
+  }
+  .matches-card-info > p {
+    font-size: 0.75em;
+  }
+  .match-country-flag {
+    width: 10%;
+  }
+}
+
+.up-arrow-div {
+  position: relative;
+  z-index: 2;
+}
+.up-arrow {
+  position: fixed;
+  bottom: 0.5em;
+  right: 1em;
+  font-size: 2em;
+  text-decoration: none;
+  width: 2.25em;
+  height: 2.25em;
+  background-color: orange;
+  border-radius: 50%;
+}
+
+/*Modal styling*/
+.modal {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+}
+.modal-image {
+ display: flex;
+ flex-flow: column; 
+}
+.modal-image-stadium {
+  width: 50%;
+  border-radius: 1em;
+  margin: 0 auto;
+  padding: 1em auto;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)}
+  to {transform: scale(1)}
+}
+
+@media only screen and (max-width: 700px){
+  .modal-image-stadium {
+      width: 100%;
+  }
+}
+
+.modal-button-close {
+  align-self: center;
+  width: 20%;
+  text-align: center;
+  font-family: 'Exo', cursive;
+  font-size: 1em;
+  padding: 1em;
+  background: #ddd;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 0.25em;
+  cursor: pointer;
+  margin-top: 1em;
+}
+.modal-button-close:hover {
+  background: #A51814;
+  color: #eee;
+  border: none;
+  border: 1px solid transparent;
+}

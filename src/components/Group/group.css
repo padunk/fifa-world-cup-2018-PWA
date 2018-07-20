@@ -1,0 +1,88 @@
+.group-main-container {
+  position: relative;
+  min-height: 3050px;
+  clear: both;
+}
+
+.tab {
+  float: left;
+}
+.tab label {
+  background: #eee;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-left: -1px;
+  position: relative;
+  left: 1px;
+  cursor: pointer;
+}
+.tab [type=radio] {
+  display: none;
+}
+.content {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background: white;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+[type=radio]:checked ~ label {
+  background: white;
+  border-bottom: 1px solid white;
+  z-index: 2;
+}
+[type=radio]:checked ~ label ~ .content {
+  z-index: 1;
+}
+
+.knockout-select {
+  padding: 1em 2em;
+  background: none;
+  border: 1px solid orange;
+  border-radius: 7px;
+}
+.knockout-select > option {
+  padding-bottom: 5px;
+  line-height: 120%;
+}
+
+.all-group {
+  display: grid;
+  font-family: 'Exo', sans-serif;
+}
+
+.group-card {
+  background: linear-gradient(#ddd, #999);
+  margin: 1em;
+  border-radius: 0.5em;
+  overflow-x: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.group-card-title {
+  font-family: 'Dusha', serif;
+  font-size: 1.5em;
+  font-weight: 100;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid #aaa;
+}
+
+table {
+  border-collapse: collapse;
+}
+.team-table-list > th, td {
+  vertical-align: middle;
+  padding: 1em;
+}
+.team-table-list > tbody > tr:nth-child(odd) {
+  background-color: rgba(220, 220, 220, 0.8);
+}
+
+@media only screen and (max-width: 425px) {
+  .th-hide {
+    display: none;
+  }
+}

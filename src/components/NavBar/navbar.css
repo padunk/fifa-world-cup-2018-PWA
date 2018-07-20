@@ -1,0 +1,100 @@
+.main-nav {
+  min-width: 100%;
+  min-height: 100%;
+  background: linear-gradient(30deg, #64B1D4, #075182);
+  padding-top: 1em;
+  display: grid;
+  display: -ms-grid;
+}
+
+.nav-brand-logo {
+  height: 10vh;
+}
+
+.nav-title-list {
+  min-width: 100%;
+}
+.nav-title {
+  font-weight: 100;
+  font-size: 1.5em;
+  color: #eee;
+}
+input#menu, .main-menu-label {
+  display: none;
+}
+a.active {
+  background-color: #075182;
+}
+
+@media only screen and (max-width: 768px) {
+  label {
+    display: block;
+    cursor: pointer;
+    padding-bottom: 1em;
+    color: #eee;
+    font-family: 'Arima Madurai', cursive;
+    font-weight: 100;
+  }
+  input:checked ~ .menu-content {
+    display: inline;
+  }
+  .menu-content {
+    display: none;
+  }
+}
+
+.nav-list-main {
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-list {
+  text-align: center;
+  text-decoration: none;
+  min-width: 100%;
+  padding: 10px;
+}
+.nav-list > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.25em;
+  color: #eee;
+  padding: 0.25em 0.63em;
+  border-radius: 0.25em;
+}
+.nav-list a:hover {
+  color: #075182;
+  background-color: #eee;
+}
+.active {
+  color: #f18b06;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-nav {
+    grid-template-columns: 20% 80%;
+    margin-bottom: 1.25em;
+    padding-top: 0;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.59);
+  }
+  .main-nav > a {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+  }
+  .nav-list {
+    display: inline;
+  }
+  .nav-brand-logo {
+    min-height: 15vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .nav-title {
+    font-size: 2em;
+  }
+  .nav-list-main {
+    font-size: 1.5em;
+  }
+}
