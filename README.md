@@ -1,10 +1,10 @@
 # 2018 World Cup Russia
-Simple PWA for one of the greatest even in the world!
+Simple PWA for one of the greatest event in the world!
 
 ## Chck the demo here
-2018-world-cup.surge.sh
+[Fifa World Cup 2018 - PWA](https://world-cup-pwa.firebaseapp.com/)
 
-Copy the repo on you computer
+Copy the repo on your computer
 ```
 npm install
 npm run
