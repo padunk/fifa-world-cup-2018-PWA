@@ -19,12 +19,12 @@ class App extends Component {
         <NavBar />
         <Switch>
           <Redirect from='/index.html' to='/'/>
-          <Route exact path = '/' component = { <Home />} />
-          <Route exact path = '/groups' component = { <Groups />} />
+          <Route exact path = '/' component = { Home } />
+          <Route exact path = '/groups' component = { Groups } />
           {/*<Route exact path = '/group/:group_id' component = {() => <GroupDetail />} />*/}
-          <Route exact path = '/matches' component = { <Matches />} />
-          <Route exact path = '/live match' component = { <Live />} />
-          <Route exact path = '/about' component = { <About />} />
+          <Route exact path = '/matches' component = { Matches } />
+          <Route exact path = '/live match' component = { Live } />
+          <Route exact path = '/about' component = { About } />
           <Route component = { NotFound } />
         </Switch>
       </div>
