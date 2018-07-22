@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import {RadioTabs} from './radioTab';
 import {getKnockoutData} from '../utils/api';
+import { alter } from '../utils/helpers';
 
 export class Knockout extends Component {
     constructor() {
@@ -95,19 +96,4 @@ export class Knockout extends Component {
         );
     }
     
-}
-
-function alter(textRound) {
-    switch(textRound) {
-        case 'round_16':
-            return 'Round of 16';
-        case 'round_8':
-            return 'Quarter Finals';
-        case 'round_4':
-            return 'Semi Finals';
-        case 'round_2_loser':
-            return 'Third Place Playoff';
-        default:
-            return 'Finals';
-    }
 }

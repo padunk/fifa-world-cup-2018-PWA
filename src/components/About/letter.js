@@ -3,7 +3,7 @@ import FlipMove from 'react-flip-move';
 
 import './styles.css';
 
-const greetings = 'Thank you, For Coming, To This, World Cup Site, Enjoy :)'.split(',');
+const greetings = 'Thank you, For Coming, To This Site, See You Next Year, Enjoy :)'.split(',');
 
 class LetterDemo extends Component {
   constructor(props) {
@@ -50,10 +50,12 @@ class LetterDemo extends Component {
 
   renderLetters() {
     const { letters } = this.state;
+    let id = {};
     
-    return letters.join('').split('').map((letter, idx) => (
-      <span key={idx} className="letter-span">{letter}</span>
-    ));
+    return letters.join('').split('').map((letter, idx) => {
+      id[letter] ? id[letter]++ : id[letter] = 1;
+      return <span key={letter + id[letter]} className="letter-span">{letter}</span>;
+    });
   }
 
   render() {

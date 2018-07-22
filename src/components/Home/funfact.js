@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 
 import { funFact } from '../utils/funFact';
+import { countWords } from '../utils/helpers';
+
 import './home.css';
 
 const NORMAL_WPM = 3; // normal words per minute for average reader.
@@ -68,13 +70,4 @@ export class FunFact extends Component {
       </div>
     );
   }
-}
-
-function countWords(sentence) {
-	var count = 0;
-  for (let i = 0, n = sentence.length; i < n; i++) {
-    sentence[i] === " " ? count ++ : count += 0;
-  }
-
-	return count += 1;
 }

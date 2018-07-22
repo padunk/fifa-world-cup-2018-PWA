@@ -4,6 +4,7 @@ import { getGithubData } from '../utils/api';
 // import { mock2 } from '../utils/mock2';
 import { GroupCard } from './groupCard';
 import { RadioTabs } from './radioTab';
+import { addGroupProperties } from '../utils/helpers';
 
 import './group.css';
 
@@ -14,8 +15,6 @@ export class GroupsList extends Component {
     this.state = {
       teams: [],
       groups: {},
-      id: 'group-stage',
-      label: 'Groups Stage',
     }
 
     this.getGroups = this.getGroups.bind(this);
@@ -45,24 +44,9 @@ export class GroupsList extends Component {
 
     return (
       <div className="main-group tab">
-        <RadioTabs id={id} labelName={label} />
+        <RadioTabs id='group-stage' labelName='Groups Stage' />
         {teams && <GroupCard teams={teams} groups={groups} /> }
       </div>
     );
   }
-}
-
-function addGroupProperties(teams) {
-  let groupName = 65; // ascii code for "A"
-
-  for (let i = 0, n = teams.length; i < n; i++) {
-    if (teams[i].id % 4 === 0) {
-      teams[i].group = String.fromCharCode(groupName);
-      groupName ++;
-    } else {
-      teams[i].group = String.fromCharCode(groupName);
-    }
-  }
-
-  return teams;
 }

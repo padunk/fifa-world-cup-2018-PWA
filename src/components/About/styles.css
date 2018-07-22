@@ -10,11 +10,11 @@
 }
 
 .enter {
-  color: #008000;
+  color: #0A5485;
 }
 
 .leave {
-  color: #A52A2A;
+  color: #62AFD2;
 }
 
 @media only screen and (max-width: 425px) {

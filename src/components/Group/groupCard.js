@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Team } from './groupStanding';
+import { sortGroupStanding } from '../utils/helpers';
 
 export function GroupCard(props) {
 
@@ -63,22 +64,4 @@ function TeamTable(props) {
       </tbody>
     </table>
   );
-}
-
-function sortGroupStanding(a, b) {
-  if (a.points == b.points) {
-    if (a.goal_diff == b.goal_diff) {
-      if (a.goal_for == b.goal_for) {
-        // check groups.winner
-        // meanwhile harcode this one for senegal and japan
-        return a.name > b.name;
-      } else {
-        return a.goal_for < b.goal_for;
-      }
-    } else {
-      return a.goal_diff < b.goal_diff;
-    }
-  } else {
-    return a.points < b.points;
-  }
 }
