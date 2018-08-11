@@ -40,7 +40,7 @@ export class GroupsList extends Component {
   };
 
   render() {
-    const { teams, groups, id, label } = this.state;
+    const { teams, groups } = this.state;
 
     return (
       <div className="main-group tab">

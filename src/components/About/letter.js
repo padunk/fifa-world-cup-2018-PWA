@@ -3,7 +3,7 @@ import FlipMove from 'react-flip-move';
 
 import './styles.css';
 
-const greetings = 'Thank you, For Coming, To This Site, See You Next Year, Enjoy :)'.split(',');
+const greetings = 'Thank you, For Coming, To This Site, See You In Four Years, Qatar World Cup 2022, Enjoy :)'.split(',');
 
 class LetterDemo extends Component {
   constructor(props) {
